@@ -3,7 +3,7 @@
 A simple productivity dashboard built with vanilla HTML, CSS, and JavaScript.
 
 🔗 Live Demo:
-https://YOUR_GITHUB_USERNAME.github.io/productivity-dashboard/
+https://spandana-builds.github.io/productivity-dashboard/
 
  ✨ Features
 - Live date & time
@@ -19,5 +19,6 @@ Deployed on GitHub Pages
 
 ## 📸 Screenshots
 ![Dashboard](dashboard.png)
+
 
 
