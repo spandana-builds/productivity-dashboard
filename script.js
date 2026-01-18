@@ -13,16 +13,45 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 function renderTasks() {
   list.innerHTML = "";
+
   tasks.forEach((task, i) => {
     const li = document.createElement("li");
-    li.textContent = task;
-    li.onclick = () => {
+    li.style.display = "flex";
+    li.style.justifyContent = "space-between";
+    li.style.alignItems = "center";
+
+    // Task text
+    const span = document.createElement("span");
+    span.textContent = task;
+    span.style.cursor = "pointer";
+
+    // Edit on click
+    span.onclick = () => {
+      const updated = prompt("Edit task:", task);
+      if (updated !== null && updated.trim() !== "") {
+        tasks[i] = updated.trim();
+        saveTasks();
+      }
+    };
+
+    // Delete button
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "🗑️";
+    delBtn.style.border = "none";
+    delBtn.style.background = "transparent";
+    delBtn.style.cursor = "pointer";
+
+    delBtn.onclick = () => {
       tasks.splice(i, 1);
       saveTasks();
     };
+
+    li.appendChild(span);
+    li.appendChild(delBtn);
     list.appendChild(li);
   });
 }
+
 
 function saveTasks() {
   localStorage.setItem("tasks", JSON.stringify(tasks));

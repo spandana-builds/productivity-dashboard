@@ -29,3 +29,12 @@ input {
   padding: 10px;
   margin-bottom: 10px;
 }
+
+li {
+  list-style: none;
+  padding: 6px 0;
+}
+
+li span:hover {
+  text-decoration: underline;
+}
