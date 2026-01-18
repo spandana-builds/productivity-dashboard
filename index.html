@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🌿 My Dashboard</h1>
+    <p id="datetime"></p>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>📝 To-Do</h2>
+      <input id="taskInput" placeholder="Add a task..." />
+      <ul id="taskList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>💬 Quote</h2>
+      <p id="quote">Loading...</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
